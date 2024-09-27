@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+  
+  .game-container {
+    text-align: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin: 20px auto;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #d3d3d3; /* Change the default background color of cells */
+    border: 2px solid #333;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Add a smooth transition for background color */
+  }
+  
+  /* Change the cell color when a mark (X or O) is placed */
+  .cell.X {
+    background-color: #ff6347; /* Color for X */
+    color: #fff;
+  }
+  
+  .cell.O {
+    background-color: #4682b4; /* Color for O */
+    color: #fff;
+  }
+  
+  /* Hover effect when it's X's turn */
+  .board.X .cell:hover {
+    background-color: #ffcccb; /* Light red for hover */
+  }
+  
+  /* Hover effect when it's O's turn */
+  .board.O .cell:hover {
+    background-color: #add8e6; /* Light blue for hover */
+  }
+  
+  .winning-message {
+    display: none;
+    font-size: 2rem;
+    margin-top: 20px;
+  }
+  
+  .winning-message.show {
+    display: block;
+  }
+  
+  button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    background-color: #4682b4;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #ff6347;
+  }
+  
